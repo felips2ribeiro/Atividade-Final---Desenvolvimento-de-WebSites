@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniacademia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><img src="logo.png" alt=""></div>
+        <div class="h1"><h1>UniAcademia</h1></div>
+    </div>
+    <div class="conteudo">
+        <div class="laranja"><img class="imagem" src="imagem.png" alt=""></div>
+        <div class="cinza">
+            <h2>Faculdade JF</h2>
+            <p>Invista no seu futuro com a educação de ponta que a UniAcademia oferece. Matricule-se já. Aprenda com os melhores e destaque-se na sua carreira. Venha para a UniAcademia. Aprenda com os melhores.</p>
+            <button class="saiba-mais">Saiba Mais</button>
+        </div>
+    </div>
+    <button onclick="mostrarTelaMensagem()" id="mensagem" class="mensagem" type="menu"><span style="color:white;" class="material-symbols-outlined">sms</span></button>
+    <div id="tela-de-mensagem">
+        <div class="tela-de-mensagem-conteudo">
+            <div class="cabeçalho">
+                <img src="https://cdn-icons-png.flaticon.com/128/630/630426.png" alt="">
+                <p>Robo</p>
+                <span class="fechar" onclick="fecharMensagem()">&times;</span>
+            </div>
+            <div class="campo-mensagem">
+                <div style="display: flex;" class="texto-robo"><img style="height: 30px; width: 30px;" src="https://cdn-icons-png.flaticon.com/128/630/630426.png" alt=""><p>Olá tudo bem, como posso ajudar</p><p></p></div>
+                <div class="texto-usuario"><p id="texto-usuario"></p><span id="usuario fotinha" class="material-symbols-outlined">
+                    person
+                    </span></div>
+            </div>
+            <div class="entrada-texto">
+                <input onkeypress="verificarTecla(event)" id="valordigitado" placeholder="Conversar" type="text">
+                <button onclick="mostrarTextoDigitado()" type="submit" class="botao-enviar"><span class="material-symbols-outlined">
+                send
+                </span></button></div>
+
+        </div>
+      </div>
+
+      <script>
+            let telaMensagem = document.getElementById("tela-de-mensagem");
+            let textoUsuario = document.getElementById("texto-usuario")
+            let botaoEnviar = document.getElementById("botaoenviar")
+            
+            function mostrarTextoDigitado(valorDigitado){
+                var valorDigitado = document.getElementById("valordigitado").value;
+                textoUsuario.innerHTML += `<p>${valorDigitado}</p>`;
+                document.getElementById("valordigitado").value = "";
+            }
+
+            function verificarTecla(event){
+                if(event.key === 'Enter'){
+                    mostrarTextoDigitado();
+                }
+            }
+        
+            function mostrarTelaMensagem() {
+                if (getComputedStyle(telaMensagem).display === 'none') {
+                    telaMensagem.style.display = "block";
+                } else {
+                    telaMensagem.style.display = "none";
+                }
+            }
+
+            function fecharMensagem() {
+            telaMensagem.style.display = 'none';
+        }
+    </script>
+    
+
+    
+    
+</body>
+</html> 

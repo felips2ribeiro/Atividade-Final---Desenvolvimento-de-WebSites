@@ -1,0 +1,195 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+    display: grid;
+    grid-template-columns: 30% 40%;
+    justify-items: center;
+}
+
+.navbar .h1{
+    font-size: x-large;
+    margin-top: -20px;
+}
+
+.navbar .logo img{
+    height: 100px;
+    
+}
+
+.conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo .laranja{
+    background-color: #ff613a;
+    height: 550px;
+    width: 250px;
+}
+
+.conteudo .laranja .imagem{
+    z-index: 1;
+    position: relative;
+    right: 200px;
+    top: 40px;
+    height: 350px;
+}
+
+.conteudo .cinza{
+    background-color: #f2f2f2;
+    height: 450px;
+    width: 600px;
+
+}
+
+.conteudo .cinza h2{
+    font-size: 40px;
+    margin-top: 80px;
+    margin-left: 30px;
+}
+
+.conteudo .cinza p{
+    font-size: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.conteudo .cinza .saiba-mais{
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 150px;
+    height: 50px;
+    font-family: Calibri;
+    font-size: 20px;
+    font-weight: light;
+    background-color: transparent;
+    border: 1px solid;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.mensagem{
+    background-color: blue;
+    width: 55px;
+    height: 55px;
+    position: fixed;
+    bottom: 5%;
+    right: 25%;
+    border: transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.mensagem:hover{
+    transform: scale(1.1);
+  }
+
+.saiba-mais:hover{
+    transform: scale(1.1,1.1);
+}
+
+#tela-de-mensagem {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 950px;
+    top: 32%;
+  }
+
+  .tela-de-mensagem-conteudo {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 50px;
+    height: 350px;
+    width: 300px;
+    box-shadow: 0px 0px 7px rgba(66,66,66,.38);
+  }
+  
+  .fechar {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+
+  .tela-de-mensagem-conteudo .cabeçalho{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ff613a;
+    border-radius: 500px;
+    color: white;
+  }
+
+  .tela-de-mensagem-conteudo img{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+  }
+
+  .tela-de-mensagem-conteudo .campo-mensagem {
+    display: flex;
+    flex-direction: column; /* Mudança para coluna para facilitar o posicionamento */
+    background-color: rgb(255, 255, 255);
+    height: 270px;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se necessário */
+  }
+  
+  .tela-de-mensagem-conteudo .texto-robo {
+    text-align: left;
+    word-wrap: break-word; /* Quebra as palavras longas */
+  } 
+  
+  .tela-de-mensagem-conteudo .texto-usuario {
+    text-align: right;
+    word-wrap: break-word; /* Quebra as palavras longas */
+  }
+  
+
+  .tela-de-mensagem-conteudo .campo-mensagem p{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .tela-de-mensagem-conteudo input{
+    margin-left:5px;
+    width: 100%;
+    padding: 12px;
+     font-size: 16px;
+     border-width: 0px;
+     border-color: #CCCCCC;
+     background-color: #FFFFFF;
+     color: #000000;
+     border-style: solid;
+     border-radius: 23px;
+     box-shadow: 0px 0px 7px rgba(66,66,66,.38);
+     outline:none;
+  }
+
+  .tela-de-mensagem-conteudo .botao-enviar{
+    width: 20%;
+    padding: 12px;
+     border-width: 0px;
+     border-color: #CCCCCC;
+     background-color: #ff613a;
+     color: #ffffff;
+     border-style: solid;
+     border-radius: 13px;
+     box-shadow: 0px 0px 7px rgba(66,66,66,.38);
+     outline:none;
+     cursor: pointer;
+  }
+
+  .tela-de-mensagem-conteudo .entrada-texto{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
